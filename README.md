@@ -2,6 +2,6 @@
 
 Site internet vitrine pour parlons bilingue
 
-## Technologie utilisé
+## Technologie utilisée
 
 Angular 17
