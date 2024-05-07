@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-nav',
@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.css',
 })
-export class NavigationComponent {}
+export class NavigationComponent {
+  isFixed: boolean = false;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.isFixed = window.scrollY > 0;
+  }
+}
