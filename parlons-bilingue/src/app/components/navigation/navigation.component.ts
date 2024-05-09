@@ -9,9 +9,4 @@ import { Component, HostListener } from '@angular/core';
 })
 export class NavigationComponent {
   isFixed: boolean = false;
-
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    this.isFixed = window.scrollY > 0;
-  }
 }
