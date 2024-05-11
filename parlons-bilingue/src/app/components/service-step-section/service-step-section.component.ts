@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'service-step-section',
@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
   templateUrl: './service-step-section.component.html',
   styleUrl: './service-step-section.component.css',
 })
-export class ServiceStepSectionComponent {}
+export class ServiceStepSectionComponent {
+  @Input() stepTitle: string = 'Etape 1 : Choisissez';
+  @Input() stepDesc: string = '';
+  @Input() stepButtonText: string = '';
+  @Input() srcImage: string = '';
+}

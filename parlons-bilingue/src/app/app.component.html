@@ -4,5 +4,19 @@
 <app-service-section></app-service-section>
 
 <hero-section></hero-section>
-<service-step-section></service-step-section>
+<div class="flex flex-col">
+  <service-step-section
+    [stepTitle]="titleStep1"
+    [stepDesc]="descStep1"
+    [stepButtonText]="textStepButton1"
+    [srcImage]="imgSrc1"
+  ></service-step-section>
+  <service-step-section
+    [stepTitle]="titleStep2"
+    [stepDesc]="descStep2"
+    [stepButtonText]="textStepButton2"
+    [srcImage]="imgSrc2"
+  ></service-step-section>
+  <!-- TODO: Réduire le gap entre les deux blocs  -->
+</div>
 <router-outlet />
