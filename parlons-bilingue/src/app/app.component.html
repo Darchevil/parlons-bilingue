@@ -1,27 +1,27 @@
 <app-accueil-section></app-accueil-section>
 
 <app-nav></app-nav>
-<section class="bg-primary">
-  <div class="container mx-auto pt-28">
-    <h1 class="text-3xl font-bold text-center">Contenu de la section</h1>
-    <p class="mt-4 text-lg text-center">
-      Ceci est le contenu de la section avec un fond de couleur différent.
-    </p>
-    <p class="mt-4 text-lg text-center">
-      Ceci est le contenu de la section avec un fond de couleur différent.
-    </p>
-    <p class="mt-4 text-lg text-center">
-      Ceci est le contenu de la section avec un fond de couleur différent.
-    </p>
-    <p class="mt-4 text-lg text-center">
-      Ceci est le contenu de la section avec un fond de couleur différent.
-    </p>
-    <p class="mt-4 text-lg text-center">
-      Ceci est le contenu de la section avec un fond de couleur différent.
-    </p>
-    <p class="mt-4 text-lg text-center">
-      Ceci est le contenu de la section avec un fond de couleur différent.
-    </p>
-  </div>
-</section>
+<app-service-section></app-service-section>
+
+<hero-section></hero-section>
+<div class="flex flex-col gap-y-3">
+  <service-step-section
+    [stepTitle]="titleStep1"
+    [stepDesc]="descStep1"
+    [stepButtonText]="textStepButton1"
+    [srcImage]="imgSrc1"
+  ></service-step-section>
+  <service-step-section
+    [stepTitle]="titleStep2"
+    [stepDesc]="descStep2"
+    [stepButtonText]="textStepButton2"
+    [srcImage]="imgSrc2"
+  ></service-step-section>
+  <service-step-section
+    [stepTitle]="titleStep3"
+    [stepDesc]="descStep3"
+    [stepButtonText]="textStepButton3"
+    [srcImage]="imgSrc3"
+  ></service-step-section>
+</div>
 <router-outlet />
