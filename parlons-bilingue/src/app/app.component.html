@@ -4,7 +4,7 @@
 <app-service-section></app-service-section>
 
 <hero-section></hero-section>
-<div class="flex flex-col">
+<div class="flex flex-col gap-y-3">
   <service-step-section
     [stepTitle]="titleStep1"
     [stepDesc]="descStep1"
@@ -17,6 +17,11 @@
     [stepButtonText]="textStepButton2"
     [srcImage]="imgSrc2"
   ></service-step-section>
-  <!-- TODO: Réduire le gap entre les deux blocs  -->
+  <service-step-section
+    [stepTitle]="titleStep3"
+    [stepDesc]="descStep3"
+    [stepButtonText]="textStepButton3"
+    [srcImage]="imgSrc3"
+  ></service-step-section>
 </div>
 <router-outlet />

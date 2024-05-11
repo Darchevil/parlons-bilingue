@@ -27,14 +27,14 @@ export class AppComponent {
   descStep1: string =
     'Choisissez l’offre qui vous convient parmis l’offre étudiante, bilingue et sur-mesure';
   textStepButton1: string = 'Les tarifs';
-  imgSrc2: string = '../../../assets/imgs/step2.png'; //FIX : L'image n'est pas prise en compte
-  titleStep2: string = 'Etape 2 : Planifiez';
+  imgSrc2: string = '../../../assets/imgs/step2.png';
+  titleStep2: string = 'Etape 2 : Planifiez vos séances';
   descStep2: string =
-    'Choisissez l’offre qui vous convient parmis l’offre étudiante, bilingue et sur-mesure';
-  textStepButton2: string = 'Les tarifs';
+    "Planifiez selon vos disponibilités du lundi au samedi jusqu'à 6h avant le rdv.";
+  textStepButton2: string = 'Je planifie';
   imgSrc3: string = '../../../assets/imgs/step3.png';
   titleStep3: string = 'Etape 3 : Connectez-vous';
   descStep3: string =
-    'Choisissez l’offre qui vous convient parmis l’offre étudiante, bilingue et sur-mesure';
-  textStepButton3: string = 'Les tarifs';
+    'Cliquez sur le lien zoom reçu par email afin de vous connecter à la séance.';
+  textStepButton3: string = 'Je télécharge zoom';
 }
