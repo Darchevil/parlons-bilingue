@@ -4,6 +4,7 @@ import { AccueilSectionComponent } from './components/accueil-section/accueil-se
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { ServiceSectionComponent } from './components/service-section/service-section.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
+import { ServiceStepSectionComponent } from './components/service-step-section/service-step-section.component';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ import { HeroSectionComponent } from './components/hero-section/hero-section.com
     NavigationComponent,
     ServiceSectionComponent,
     HeroSectionComponent,
+    ServiceStepSectionComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
