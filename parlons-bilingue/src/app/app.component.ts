@@ -5,6 +5,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { ServiceSectionComponent } from './components/service-section/service-section.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
 import { ServiceStepSectionComponent } from './components/service-step-section/service-step-section.component';
+import { AboutComponent } from './components/about/about.component';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,7 @@ import { ServiceStepSectionComponent } from './components/service-step-section/s
     ServiceSectionComponent,
     HeroSectionComponent,
     ServiceStepSectionComponent,
+    AboutComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
