@@ -9,6 +9,8 @@
   >
     <!-- TODO: faire une liste de témoignage et afficher la liste  -->
     <!-- TODO: mettre en place pagination -->
-    <temoignage-card></temoignage-card>
+    <ng-container *ngFor="let temoignageCard of temoignageCardList">
+      <temoignage-card [temoignageCardInput]="temoignageCard"></temoignage-card>
+    </ng-container>
   </div>
 </div>

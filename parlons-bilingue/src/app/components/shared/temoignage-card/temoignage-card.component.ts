@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './temoignage-card.component.css',
 })
 export class TemoignageCardComponent {
+  @Input() temoignageCardInput: Temoignage = new Temoignage('', 0, '', '');
   temoignageCard: Temoignage = new Temoignage(
     'Kassandra',
     5,
