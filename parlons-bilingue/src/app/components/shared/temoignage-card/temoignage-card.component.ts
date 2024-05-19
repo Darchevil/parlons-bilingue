@@ -1,15 +1,23 @@
 import { Component, Input } from '@angular/core';
+import Temoignage from '../../../models/temoignage';
+import { StarRatingComponent } from '../star-rating/star-rating.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'temoignage-card',
   standalone: true,
-  imports: [],
+  imports: [StarRatingComponent, CommonModule],
   templateUrl: './temoignage-card.component.html',
   styleUrl: './temoignage-card.component.css',
 })
 export class TemoignageCardComponent {
-  @Input() name: string = '';
-  @Input() stars: number = 0;
-  @Input() title: string = '';
-  @Input() description: string = '';
+  temoignageCard: Temoignage = new Temoignage(
+    'Kassandra',
+    5,
+    `la progression est rapide sans l’impression de se sentir noyé`,
+    `Je trouve la méthode excellente, la progression est rapide sans
+  l’impression de se sentir noyé. L’ambiance des cours est conviviale. J’ai
+  beaucoup aimé le professionnalisme et l’implication d’Eddy durant les cours.
+  Il y’a un réel échange entre le professeur et l’élève.`
+  );
 }

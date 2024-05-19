@@ -1,0 +1,18 @@
+<div class="flex justify-center">
+  <ng-container *ngFor="let star of stars; let i = index">
+    <svg
+      class="w-6 h-6 cursor-pointer"
+      [ngClass]="{
+        'text-blue': i < rating,
+        'text-secondary': i >= rating
+      }"
+      fill="currentColor"
+      viewBox="0 0 20 20"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M9.049 2.927C9.27 2.354 9.73 2 10.25 2s.98.354 1.201.927l1.529 3.882 4.3.391c.621.057 1.154.38 1.407.865s.185 1.145-.157 1.585l-3.142 3.09.745 4.284c.104.6-.146 1.204-.645 1.537s-1.14.327-1.624-.082L10 15.431l-3.845 2.021c-.484.409-1.117.538-1.624.082-.5-.333-.749-.936-.645-1.537l.745-4.284-3.142-3.09c-.342-.44-.463-1.042-.157-1.585s.786-.808 1.407-.865l4.3-.391L9.049 2.927z"
+      />
+    </svg>
+  </ng-container>
+</div>

@@ -7,6 +7,7 @@ import { HeroSectionComponent } from './components/hero-section/hero-section.com
 import { ServiceStepSectionComponent } from './components/service-step-section/service-step-section.component';
 import { AboutComponent } from './components/about/about.component';
 import { TemoignagesComponent } from './components/temoignages/temoignages.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +21,7 @@ import { TemoignagesComponent } from './components/temoignages/temoignages.compo
     ServiceStepSectionComponent,
     AboutComponent,
     TemoignagesComponent,
+    CommonModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
