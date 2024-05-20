@@ -1,0 +1,36 @@
+<div class="bg-white relative container w-full h-auto top-[650px]">
+  <div class="relative w-auto h-auto text-center">
+    <span class="text-primary text-3xl font-light font-space"
+      >Ils ont réussi</span
+    >
+  </div>
+  <div class="flex flex-col">
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 p-4"
+    >
+      <!-- TODO: faire une liste de témoignage et afficher la liste  -->
+      <!-- TODO: mettre en place pagination -->
+      <ng-container
+        *ngFor="
+          let temoignageCard of temoignageCardList
+            | paginate : { itemsPerPage: 3, currentPage: p }
+        "
+      >
+        <temoignage-card
+          [temoignageCardInput]="temoignageCard"
+        ></temoignage-card>
+      </ng-container>
+    </div>
+    <div class="my-4">
+      <pagination-controls
+        (pageChange)="p = $event"
+        [nextLabel]="suivant"
+        [previousLabel]="precedent"
+        [responsive]="true"
+        [autoHide]="true"
+        class="relative left-[500px]"
+      >
+      </pagination-controls>
+    </div>
+  </div>
+</div>
