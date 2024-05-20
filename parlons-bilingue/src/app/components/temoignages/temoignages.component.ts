@@ -33,14 +33,23 @@ export class TemoignagesComponent {
   suivant: string = 'suivant';
   precedent: string = 'précédent';
   temoignageCardList: Temoignage[] = [
-    { name: 'toto', stars: 3, title: 'hello', description: 'on est là' },
-    { name: 'titi', stars: 4, title: 'hellooo', description: 'bien joué' },
-    { name: 'titi', stars: 4, title: 'hellooo', description: 'bien joué' },
     {
-      name: 'tutu',
+      name: 'Cassandra K.',
       stars: 5,
-      title: 'hellooo',
-      description: 'Trop Fooooort !',
+      title: 'la progression est rapide sans l’impression de se sentir noyé',
+      description: `Je trouve la méthode excellente, la progression est rapide sans l’impression de se sentir noyé. L’ambiance des cours est conviviale. J’ai beaucoup aimé le professionnalisme et l’implication d’Eddy durant les cours. Il y a un réel échange entre le professeur et l’élève.`,
+    },
+    {
+      name: 'Emerick A.',
+      stars: 4,
+      title: `Vraiment à l'écoute et excellente manière d'enseigner !`,
+      description: `Grâce à la formation proposée par Parlonsbilingue.com, j’ai pu retrouver un bon niveau en anglais. Avec des sessions d’anglais de 30 minutes tous les jours, cela rends le travail d’apprentissage et de perfectionnement bien plus ludique et éducatif que de grosses sessions de cours dispatchées dans la semaine. De plus le formateur, Eddy, a vraiment été à l’écoute de mes attentes et a une excellente manière d'enseigner. Je recommande grandement !`,
+    },
+    {
+      name: 'Camille P.',
+      stars: 5,
+      title: `Je suis désormais plus confiante avec mon anglais.`,
+      description: `J'ai eu de mauvaises expériences à l'école avec l'anglais mais grâce à mon expérience avec Eddy, cette peur a complètement disparu. Son approche bienveillante et encourageante m'a permis de me sentir à l'aise dès le premier jour. Ses explications claires et sa patience ont fait toute la différence. Je suis désormais plus confiante avec mon anglais, et je suis reconnaissante envers Eddy pour avoir transformé mon attitude envers l'apprentissage de l'anglais.`,
     },
   ];
 }
