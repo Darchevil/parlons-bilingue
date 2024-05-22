@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 
 @Component({
   selector: 'contact',
@@ -9,8 +10,17 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
   styleUrl: './contact.component.css',
 })
 export class ContactComponent {
-  name: FormControl = new FormControl('');
-  email: FormControl = new FormControl('');
-  subject: FormControl = new FormControl('');
-  message: FormControl = new FormControl('');
+  contactForm = new FormGroup({
+    name: new FormControl(''),
+    email: new FormControl(''),
+    subject: new FormControl(''),
+    message: new FormControl(''),
+  });
+
+  public submitForm(): void {
+    console.log('name :', this.contactForm.value.name);
+    console.log('email :', this.contactForm.value.email);
+    console.log('subject :', this.contactForm.value.subject);
+    console.log('message :', this.contactForm.value.message);
+  }
 }

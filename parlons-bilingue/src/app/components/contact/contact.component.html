@@ -40,7 +40,7 @@
       src="../../../assets/imgs/photo_contact.png"
     />
     <div
-      class="w-[220px] h-[100px] text-center text-primary text-lg left-5 top-[380px] font-normal relative font-inter"
+      class="w-[225px] h-[100px] text-center text-primary text-lg left-5 top-[380px] font-normal relative font-inter"
     >
       Vous avez des questions ? Je suis là pour y répondre et vous fournir des
       informations supplémentaires pour vous guider dans votre parcours
@@ -50,7 +50,7 @@
     <div
       class="w-[440px] h-[600px] absolute bg-white rounded-[50px] border-2 border-blue left-[37%] top-[150px]"
     >
-      <form>
+      <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
         <div class="flex flex-row">
           <div class="relative left-5 top-10">
             <label for="name" class="text-xl text-primary font-baskerIta"
@@ -60,7 +60,7 @@
               <input
                 type="text"
                 id="name"
-                [formControl]="name"
+                formControlName="name"
                 required
                 class="w-[152px] h-[67px] pl-[19px] pr-[29px] py-3 bg-opacity-40 rounded-[20px] justify-start items-center inline-flex bg-blue outline-none text-primary border-none focus:border-none text-xl font-normal font-['Inter']"
               />
@@ -74,7 +74,7 @@
               <input
                 type="email"
                 id="email"
-                [formControl]="email"
+                formControlName="email"
                 required
                 class="w-[200px] h-[67px] pl-[19px] pr-[29px] py-3 bg-opacity-40 rounded-[20px] justify-start items-center inline-flex bg-blue outline-none text-primary border-none focus:border-none text-lg font-normal font-['Inter']"
               />
@@ -88,8 +88,8 @@
           <div>
             <input
               type="text"
-              id="message"
-              [formControl]="message"
+              id="subject"
+              formControlName="subject"
               required
               class="w-[370px] h-[67px] pl-[19px] pr-[29px] py-3 bg-opacity-40 rounded-[20px] justify-start items-center inline-flex bg-blue outline-none text-primary border-none focus:border-none text-lg font-normal font-['Inter']"
             />
@@ -100,13 +100,13 @@
             >Message</label
           >
           <div>
-            <input
+            <textarea
               type="text"
-              id="subject"
-              [formControl]="subject"
+              id="message"
+              formControlName="message"
               required
-              class="w-[370px] h-[240px] pl-[19px] pr-[29px] py-3 bg-opacity-40 rounded-[20px] justify-start bg-blue outline-none text-primary border-none focus:border-none text-lg font-normal font-['Inter']"
-            />
+              class="resize-none w-[370px] h-[240px] pl-[19px] pr-[29px] py-3 bg-opacity-40 rounded-[20px] justify-start bg-blue outline-none text-primary border-none focus:border-none text-lg font-normal font-['Inter']"
+            ></textarea>
           </div>
         </div>
         <button
