@@ -17,10 +17,15 @@ export class ContactComponent {
     message: new FormControl(''),
   });
 
-  public submitForm(): void {
+  public async submitForm(): Promise<void> {
+    emailjs.init('m4cTexIXMuP3QnW9c');
+    let response = await emailjs.send('service_hiua469', 'template_1zgwaw5', {
+      name: this.contactForm.value.name,
+      email: this.contactForm.value.email,
+      subject: this.contactForm.value.subject,
+      message: this.contactForm.value.message,
+    });
+    alert('Votre demande est bien envoyée');
     console.log('name :', this.contactForm.value.name);
-    console.log('email :', this.contactForm.value.email);
-    console.log('subject :', this.contactForm.value.subject);
-    console.log('message :', this.contactForm.value.message);
   }
 }
