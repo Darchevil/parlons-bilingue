@@ -9,5 +9,5 @@ import { ButtonLargeComponent } from '../components/shared/button-large/button-l
   styleUrl: './tarifs.component.css',
 })
 export class TarifsComponent {
-  textJeMeLance: string = 'Je me lance !';
+  textJeMeLance: string = `C'est parti !`;
 }
