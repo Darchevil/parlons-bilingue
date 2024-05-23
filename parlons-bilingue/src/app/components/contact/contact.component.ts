@@ -18,6 +18,7 @@ export class ContactComponent {
   });
 
   public async submitForm(): Promise<void> {
+    //TODO: Ajouter le compte d'Eddy pour qu'il reçoivent les mails
     emailjs.init('m4cTexIXMuP3QnW9c');
     let response = await emailjs.send('service_hiua469', 'template_1zgwaw5', {
       name: this.contactForm.value.name,
