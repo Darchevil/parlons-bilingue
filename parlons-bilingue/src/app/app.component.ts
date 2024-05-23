@@ -8,6 +8,7 @@ import { ServiceStepSectionComponent } from './components/service-step-section/s
 import { AboutComponent } from './components/about/about.component';
 import { TemoignagesComponent } from './components/temoignages/temoignages.component';
 import { CommonModule } from '@angular/common';
+import { ContactComponent } from './components/contact/contact.component';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +22,7 @@ import { CommonModule } from '@angular/common';
     ServiceStepSectionComponent,
     AboutComponent,
     TemoignagesComponent,
+    ContactComponent,
     CommonModule,
   ],
   templateUrl: './app.component.html',

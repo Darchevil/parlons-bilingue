@@ -1,0 +1,121 @@
+<div class="relative container w-full h-auto md:top-[620px]">
+  <div class="relative w-[400px] h-auto left-[35%] pt-20 text-center">
+    <span class="text-white text-3xl font-light font-space"
+      >Contactons-nous</span
+    >
+  </div>
+
+  <div
+    class="w-[650px] h-[530px] relative bg-white rounded-[50px] left-[330px] top-[50px]"
+  >
+    <div
+      class="pl-[18px] pr-9 pt-px left-[100px] top-[10px] absolute bg-white align-middle rounded-[20px] border-2 border-blue justify-start items-center inline-flex"
+    >
+      <div
+        class="w-[377px] h-[100px] text-center py-8 px-9 text-primary text-xl font-light font-space"
+      >
+        Planifiez votre séance
+      </div>
+    </div>
+    <div
+      class="pb-[10px] left-[40px] top-[50px] absolute justify-start items-center inline-flex"
+    >
+      <!-- Calendly -->
+    </div>
+  </div>
+  <div
+    class="w-[750px] h-[800px] relative bg-white rounded-[50px] left-[280px] top-[150px]"
+  >
+    <div
+      class="pl-[18px] pr-9 pt-px left-[150px] top-[10px] absolute bg-white align-middle rounded-[20px] border-2 border-blue justify-start items-center inline-flex"
+    >
+      <div
+        class="w-[377px] h-[100px] text-center py-8 px-9 text-primary text-xl font-light font-space"
+      >
+        Contactez-moi
+      </div>
+    </div>
+    <img
+      class="w-[220px] h-auto absolute left-5 top-[156px] rounded-[50px]"
+      src="../../../assets/imgs/photo_contact.png"
+    />
+    <div
+      class="w-[225px] h-[100px] text-center text-primary text-lg left-5 top-[380px] font-normal relative font-inter"
+    >
+      Vous avez des questions ? Je suis là pour y répondre et vous fournir des
+      informations supplémentaires pour vous guider dans votre parcours
+      d'apprentissage linguistique. Je réponds vos demandes dans les plus brefs
+      délais. Je suis impatient de vous aider à atteindre vos objectifs !
+    </div>
+    <div
+      class="w-[440px] h-[600px] absolute bg-white rounded-[50px] border-2 border-blue left-[37%] top-[150px]"
+    >
+      <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
+        <div class="flex flex-row">
+          <div class="relative left-5 top-10">
+            <label for="name" class="text-xl text-primary font-baskerIta"
+              >Nom</label
+            >
+            <div>
+              <input
+                type="text"
+                id="name"
+                formControlName="name"
+                required
+                class="w-[152px] h-[67px] pl-[19px] pr-[29px] py-3 bg-opacity-40 rounded-[20px] justify-start items-center inline-flex bg-blue outline-none text-primary border-none focus:border-none text-xl font-normal font-['Inter']"
+              />
+            </div>
+          </div>
+          <div class="relative left-10 top-10">
+            <label for="email" class="text-xl text-primary font-baskerIta"
+              >Email</label
+            >
+            <div>
+              <input
+                type="email"
+                id="email"
+                formControlName="email"
+                required
+                class="w-[200px] h-[67px] pl-[19px] pr-[29px] py-3 bg-opacity-40 rounded-[20px] justify-start items-center inline-flex bg-blue outline-none text-primary border-none focus:border-none text-lg font-normal font-['Inter']"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="relative left-5 top-14">
+          <label for="subject" class="text-xl text-primary font-baskerIta"
+            >Objet de la demande</label
+          >
+          <div>
+            <input
+              type="text"
+              id="subject"
+              formControlName="subject"
+              required
+              class="w-[370px] h-[67px] pl-[19px] pr-[29px] py-3 bg-opacity-40 rounded-[20px] justify-start items-center inline-flex bg-blue outline-none text-primary border-none focus:border-none text-lg font-normal font-['Inter']"
+            />
+          </div>
+        </div>
+        <div class="relative left-5 top-16">
+          <label for="message" class="text-xl text-primary font-baskerIta"
+            >Message</label
+          >
+          <div>
+            <textarea
+              type="text"
+              id="message"
+              formControlName="message"
+              required
+              class="resize-none w-[370px] h-[240px] pl-[19px] pr-[29px] py-3 bg-opacity-40 rounded-[20px] justify-start bg-blue outline-none text-primary border-none focus:border-none text-lg font-normal font-['Inter']"
+            ></textarea>
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="text-white font-baskerIta text-[8px] px-4 py-2 top-20 left-36 inline-block relative md:text-xl border-primary hover:border-white border-2 md:border-2 rounded-full bg-blue hover:bg-primary transition-all duration-300"
+        >
+          Envoyer
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
