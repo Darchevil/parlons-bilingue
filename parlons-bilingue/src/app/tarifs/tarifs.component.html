@@ -46,6 +46,16 @@
   >
   Découvrez ce que je vous propose pour atteindre vos objectifs.
 </div>
-<div class="relative left-[50px] top-[500px]">
-  <tarif></tarif>
+<div class="relative left-[50px] top-[500px] flex space-x-10">
+  <tarif-element [name]="etudiant" [prix]="tarifEtudiant"></tarif-element>
+  <tarif-element
+    [name]="illimite"
+    [prix]="tarifIllimite"
+    [onTop]="true"
+  ></tarif-element>
+  <tarif-element
+    [name]="surMesure"
+    [prix]="tarifSurMesure"
+    [avantage2]="avantage2SurMesure"
+  ></tarif-element>
 </div>
