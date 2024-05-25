@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { ContactComponent } from '../components/contact/contact.component';
 import { TemoignagesComponent } from '../components/temoignages/temoignages.component';
 import { AboutComponent } from '../components/about/about.component';
@@ -8,6 +8,7 @@ import { HeroSectionComponent } from '../components/hero-section/hero-section.co
 import { ServiceSectionComponent } from '../components/service-section/service-section.component';
 import { NavigationComponent } from '../components/navigation/navigation.component';
 import { AccueilSectionComponent } from '../components/accueil-section/accueil-section.component';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -26,7 +27,8 @@ import { AccueilSectionComponent } from '../components/accueil-section/accueil-s
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit {
+  constructor(private route: ActivatedRoute) {}
   title: string = 'parlons-bilingue';
   imgSrc1: string = '../../../assets/imgs/step1.png';
   titleStep1: string = 'Etape 1 : Choisissez';
@@ -43,4 +45,15 @@ export class HomeComponent {
   descStep3: string =
     'Cliquez sur le lien zoom reçu par email afin de vous connecter à la séance.';
   textStepButton3: string = 'Je télécharge zoom';
+
+  ngAfterViewInit(): void {
+    this.route.fragment.subscribe((fragment) => {
+      if (fragment) {
+        const element = document.getElementById(fragment);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+  }
 }
