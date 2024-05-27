@@ -9,6 +9,8 @@ import { ServiceSectionComponent } from '../components/service-section/service-s
 import { NavigationComponent } from '../components/navigation/navigation.component';
 import { AccueilSectionComponent } from '../components/accueil-section/accueil-section.component';
 import { ActivatedRoute } from '@angular/router';
+import { ViewportScroller } from '@angular/common';
+import { ForwardRefHandling } from '@angular/compiler';
 
 @Component({
   selector: 'app-home',
@@ -28,7 +30,10 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './home.component.css',
 })
 export class HomeComponent implements AfterViewInit {
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    private viewPortScroller: ViewportScroller
+  ) {}
   title: string = 'parlons-bilingue';
   imgSrc1: string = '../../../assets/imgs/step1.png';
   titleStep1: string = 'Etape 1 : Choisissez';
@@ -47,13 +52,25 @@ export class HomeComponent implements AfterViewInit {
   textStepButton3: string = 'Je télécharge zoom';
 
   ngAfterViewInit(): void {
-    this.route.fragment.subscribe((fragment) => {
-      if (fragment) {
-        const element = document.getElementById(fragment);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
+    this.route.paramMap.subscribe((params) => {
+      const position = Number(params.get('position'));
+      if (!isNaN(position)) {
+        if (typeof window !== 'undefined') {
+          window.scrollTo({ top: position, behavior: 'smooth' });
         }
+        // this.viewPortScroller.scrollToPosition([0, position]);
       }
     });
+
+    // this.route.fragment.subscribe((fragment) => {
+    //   if (fragment) {
+    //     const element = document.getElementById(fragment);
+    //     if (element) {
+    //       element.scrollIntoView({ behavior: 'smooth' });
+    //     }
+    //   }
+
+    //   this.viewPortScroller.scrollToPosition([0,fragment]);
+    // });
   }
 }

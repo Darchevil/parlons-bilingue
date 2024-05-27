@@ -24,4 +24,8 @@ export class NavigationComponent {
   scrollToSection(sectionId: string) {
     this.scrollService.scrollToElement(sectionId);
   }
+
+  navigateToPosition(position: number) {
+    this.router.navigate(['', position]);
+  }
 }
