@@ -17,12 +17,16 @@
     >
   </div>
   <div class="absolute top-44 md:top-80 left-6 md:left-56">
-    <button-large [textButton]="textJeMeLance"></button-large>
+    <button-large
+      [sectionSource]="sectionSourceTarifMsg"
+      [textButton]="textJeMeLance"
+    ></button-large>
   </div>
 </div>
 <div class="h-[120px]"></div>
 <app-nav [isTarif]="true"></app-nav>
 <div
+  id="messageTarif"
   class="w-[346px] h-[135px] text-center relative top-[200px] left-[400px] text-white text-3xl font-light font-space"
 >
   De vrais progrès dès le 1er mois

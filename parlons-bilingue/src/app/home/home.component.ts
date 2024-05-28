@@ -34,22 +34,28 @@ export class HomeComponent implements AfterViewInit {
     private route: ActivatedRoute,
     private viewPortScroller: ViewportScroller
   ) {}
+  //---- 1er Bouton
   title: string = 'parlons-bilingue';
   imgSrc1: string = '../../../assets/imgs/step1.png';
   titleStep1: string = 'Etape 1 : Choisissez';
   descStep1: string =
     'Choisissez l’offre qui vous convient parmis l’offre étudiante, bilingue et sur-mesure';
   textStepButton1: string = 'Les tarifs';
+  hrefSourceTarif: string = '/tarifs';
+  // ----- 2eme Bouton
   imgSrc2: string = '../../../assets/imgs/step2.png';
   titleStep2: string = 'Etape 2 : Planifiez vos séances';
   descStep2: string =
     "Planifiez selon vos disponibilités du lundi au samedi jusqu'à 6h avant le rdv.";
   textStepButton2: string = 'Je planifie';
+  sectionSourceContact: string = 'contactSection';
+  //---- 3eme bouton
   imgSrc3: string = '../../../assets/imgs/step3.png';
   titleStep3: string = 'Etape 3 : Connectez-vous';
   descStep3: string =
     'Cliquez sur le lien zoom reçu par email afin de vous connecter à la séance.';
   textStepButton3: string = 'Je télécharge zoom';
+  hrefSourceZoom: string = 'https://zoom.us/fr/download';
 
   ngAfterViewInit(): void {
     this.route.paramMap.subscribe((params) => {

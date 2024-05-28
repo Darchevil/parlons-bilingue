@@ -13,6 +13,7 @@ import { NgClass } from '@angular/common';
 })
 export class TarifsComponent {
   textJeMeLance: string = `C'est parti !`;
+  sectionSourceTarifMsg = 'messageTarif';
   etudiant: string = 'Illimité - étudiant';
   tarifEtudiant: string = '90€/mois';
   illimite: string = 'Illimité - plein tarif';

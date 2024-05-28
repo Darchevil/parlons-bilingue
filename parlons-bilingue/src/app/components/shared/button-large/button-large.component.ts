@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ScrollService } from '../../../services/scroll.service';
 
 @Component({
   selector: 'button-large',
@@ -8,5 +9,11 @@ import { Component, Input } from '@angular/core';
   styleUrl: './button-large.component.css',
 })
 export class ButtonLargeComponent {
+  constructor(private scrollService: ScrollService) {}
   @Input() textButton: string = 'Button';
+  @Input() sectionSource: string = '';
+
+  scrollToSection() {
+    this.scrollService.scrollToElement(this.sectionSource);
+  }
 }

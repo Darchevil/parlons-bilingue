@@ -41,7 +41,7 @@
     >
   </div>
   <img
-    class="w-[612px] h-[408px] left-[600px] top-[760px] absolute rounded-[101px]"
+    class="w-[612px] h-[408px] left-[500px] top-[760px] absolute rounded-[101px]"
     src="../../../assets/imgs/img_svc.png"
   />
   <div
@@ -80,8 +80,20 @@
         </p>
       </div>
     </div>
+    <div class="flex flex-row items-center">
+      <img
+        class="relative left-10 pb-4"
+        src="../../../assets/imgs/thumb-up.png"
+      />
+      <div class="container w-[30%]">
+        <p class="relative text-white font-inter left-28 text-xl">
+          Premier cours gratuit
+        </p>
+      </div>
+    </div>
     <div class="pl-28">
       <button
+        (click)="scrollToSection('contactSection')"
         class="bg-white text-primary hover:text-white font-baskerIta text-[8px] md:text-xl border-primary w-[40%] h-14 border-2 md:border-2 rounded-full hover:bg-blue transition-all duration-300"
       >
         {{ textLance }}
