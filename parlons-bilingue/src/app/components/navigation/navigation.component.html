@@ -61,7 +61,6 @@
   </div>
 </nav>
 <!-- NAV - TARIF  -->
-<!-- FIX: Ajouter les numéro correspondants pour qu'il y ait un scroll smooth vers les éléments -->
 <nav class="px-4 sticky top-0 z-50" *ngIf="isTarif">
   <div class="w-[96%] h-[99px] bg-white bg-opacity-60 absolute rounded-[60px]">
     <div
@@ -92,7 +91,7 @@
       </a>
     </button>
     <button
-      (click)="scrollToSection('contactSection')"
+      (click)="navigateToPosition(7500)"
       class="w-[142px] h-[54px] pl-[19px] pr-[18px] py-[13px] left-[601px] top-[23px] absolute border bg-white rounded-[50px] justify-center items-center inline-flex hover:bg-blue transition-all duration-300"
     >
       <a
