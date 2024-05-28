@@ -1,5 +1,8 @@
 <div class="bg-white relative container w-full h-auto top-[650px]">
-  <div class="relative w-[400px] h-[100px] left-[35%] pt-20 text-center">
+  <div
+    class="relative w-[400px] h-[100px] left-[35%] pt-20 text-center"
+    id="sectionAbout"
+  >
     <span class="text-primary text-3xl font-light font-space"
       >Découvrez votre </span
     ><span class="text-blue text-3xl font-normal font-baskerIta"
@@ -109,9 +112,9 @@
     ><span class="text-blue text-2xl font-normal font-basker"> - </span
     ><span class="text-blue text-2xl font-normal font-basker"> Eddy </span>
   </div>
-  <!-- TODO: transformer button en component shared CTA button -->
   <div class="w-auto h-[150px] relative left-[38%]">
     <button
+      (click)="scrollToSection('contactSection')"
       class="text-white font-baskerIta text-[8px] md:text-xl border-primary hover:border-white w-[300px] h-[80px] border-2 md:border-2 rounded-full bg-blue hover:bg-primary transition-all duration-300"
     >
       J'essaye gratuitement

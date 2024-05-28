@@ -17,12 +17,16 @@
     >
   </div>
   <div class="absolute top-44 md:top-80 left-6 md:left-56">
-    <button-large [textButton]="textJeMeLance"></button-large>
+    <button-large
+      [sectionSource]="sectionSourceTarifMsg"
+      [textButton]="textJeMeLance"
+    ></button-large>
   </div>
 </div>
 <div class="h-[120px]"></div>
-<app-nav></app-nav>
+<app-nav [isTarif]="true"></app-nav>
 <div
+  id="messageTarif"
   class="w-[346px] h-[135px] text-center relative top-[200px] left-[400px] text-white text-3xl font-light font-space"
 >
   De vrais progrès dès le 1er mois
@@ -62,6 +66,7 @@
 
 <div
   class="w-[650px] h-[730px] relative bg-white rounded-[50px] left-[330px] top-[650px]"
+  id="contactSection"
 >
   <div
     class="pl-[18px] pr-9 pt-px left-[100px] top-[10px] absolute bg-white align-middle rounded-[20px] border-2 border-blue justify-start items-center inline-flex"
