@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { ContactComponent } from '../components/contact/contact.component';
 import { TemoignagesComponent } from '../components/temoignages/temoignages.component';
 import { AboutComponent } from '../components/about/about.component';
@@ -12,6 +12,7 @@ import { ActivatedRoute } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
 import { ForwardRefHandling } from '@angular/compiler';
 import { ScrollService } from '../services/scroll.service';
+import { AnalyticsService } from '../services/analytics.service';
 
 @Component({
   selector: 'app-home',
@@ -33,7 +34,7 @@ import { ScrollService } from '../services/scroll.service';
 export class HomeComponent implements AfterViewInit {
   constructor(
     private route: ActivatedRoute,
-    private viewPortScroller: ViewportScroller,
+    private analyticsService: AnalyticsService,
     private scrollService: ScrollService
   ) {}
   //---- 1er Bouton
@@ -66,21 +67,17 @@ export class HomeComponent implements AfterViewInit {
         if (typeof window !== 'undefined') {
           window.scrollTo({ top: position, behavior: 'smooth' });
         }
-        // this.viewPortScroller.scrollToPosition([0, position]);
       }
     });
-
-    // this.route.fragment.subscribe((fragment) => {
-    //   if (fragment) {
-    //     const element = document.getElementById(fragment);
-    //     if (element) {
-    //       element.scrollIntoView({ behavior: 'smooth' });
-    //     }
-    //   }
-
-    //   this.viewPortScroller.scrollToPosition([0,fragment]);
-    // });
   }
+
+  //   ngOnInit(): void {
+  //     this.analyticsService.trackEvent(
+  //       'home page loaded',
+  //       'The home page is loaded into view',
+  //       'load'
+  //     );
+  //   }
 
   scrollToSection(sectionId: string) {
     this.scrollService.scrollToElement(sectionId);
