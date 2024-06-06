@@ -1,34 +1,18 @@
-<div class="relative top-[600px] left-[350px] h-[580px] items-center w-[100%]">
+<div class="relative top-[600px] left-16 h-[580px] items-center w-[100%]">
   <div
-    class="w-[560px] h-[537px] relative bg-secondary rounded-[60px] overflow-hidden"
+    class="w-[360px] h-[337px] relative bg-black bg-opacity-40 rounded-[60px] overflow-hidden"
   >
     <img
-      class="w-[560px] h-[210px] rounded-lg top-0 absolute"
+      class="w-[360px] h-[120px] rounded-lg top-0 absolute"
       src="{{ srcImage }}"
     />
-    <div class="w-[560px] h-[290px] top-[261px] absolute text-center">
-      <span class="text-white text-3xl font-bold font-['Space Grotesk']"
-        >{{ stepTitle }} <br /></span
-      ><span class="text-white text-[25px] font-light font-['Space Grotesk']">{{
+    <div class="w-[360px] h-[190px] top-[131px] absolute text-center">
+      <span class="text-white text-xl font-bold font-space"
+        >{{ stepTitle }} <br />
+        <br /> </span
+      ><span class="text-white text-lg font-light font-space">{{
         stepDesc
       }}</span>
-    </div>
-    <div
-      class="w-[374px] h-[109px] left-[93px] top-[391px] absolute bg-blue-500 rounded-[50px] justify-center items-center inline-flex"
-    >
-      <button
-        (click)="scrollToSection()"
-        class="w-[279px] h-[74px] bg-blue hover:bg-primary transition-all duration-300 border-2 border-primary hover:border-white rounded-full text-center text-white text-[25px] font-space"
-      >
-        <ng-container *ngIf="isLink">
-          <a href="{{ hrefSource }}">
-            {{ stepButtonText }}
-          </a>
-        </ng-container>
-        <ng-container *ngIf="!isLink">
-          {{ stepButtonText }}
-        </ng-container>
-      </button>
     </div>
   </div>
 </div>
