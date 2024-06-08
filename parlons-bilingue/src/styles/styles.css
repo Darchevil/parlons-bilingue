@@ -22,6 +22,20 @@
   }
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #7c90a0;
+}
+::-webkit-scrollbar-thumb {
+  background: #3993dd; /* Couleur de la poignée de la scrollbar */
+  border-radius: 30%;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #46424c; /* Couleur de la poignée de la scrollbar quand elle est survolée */
+}
+
 p {
   font-family: "SpaceGrotesk";
 }
