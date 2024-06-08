@@ -8,119 +8,122 @@
     >
   </div>
 
-  <div
-    class="w-[650px] h-[730px] relative bg-white rounded-[50px] left-[330px] top-[50px]"
-  >
+  <div class="flex">
     <div
-      class="pl-[18px] pr-9 pt-px left-[100px] top-[10px] absolute bg-white align-middle rounded-[20px] border-2 border-blue justify-start items-center inline-flex"
+      class="w-[450px] h-[680px] relative bg-white rounded-[50px] top-[50px] left-7"
     >
       <div
-        class="w-[377px] h-[100px] text-center py-8 px-9 text-primary text-xl font-light font-space"
+        class="pl-[18px] pr-9 pt-px left-28 top-[10px] absolute bg-white align-middle justify-start items-center inline-flex"
       >
-        Planifiez votre séance
+        <div
+          class="w-[200px] h-[100px] text-center py-8 px-5 text-primary text-xl font-light font-space"
+        >
+          Planifiez votre séance
+        </div>
       </div>
+      <!-- Début de widget en ligne Calendly -->
+      <div
+        class="calendly-inline-widget w-[400px] h-[500px] left-10 relative top-[150px]"
+        data-url="https://calendly.com/parlonsbilingue"
+      ></div>
+      <!-- Fin de widget en ligne Calendly -->
     </div>
-    <!-- Début de widget en ligne Calendly -->
     <div
-      class="calendly-inline-widget w-[600px] h-[500px] relative top-[150px]"
-      data-url="https://calendly.com/parlonsbilingue"
-    ></div>
-    <!-- Fin de widget en ligne Calendly -->
-  </div>
-  <div
-    class="w-[750px] h-[800px] relative bg-white rounded-[50px] left-[280px] top-[150px]"
-  >
-    <div
-      class="pl-[18px] pr-9 pt-px left-[150px] top-[10px] absolute bg-white align-middle rounded-[20px] border-2 border-blue justify-start items-center inline-flex"
+      class="w-[650px] h-[680px] top-12 relative bg-white rounded-[50px] left-20"
     >
       <div
-        class="w-[377px] h-[100px] text-center py-8 px-9 text-primary text-xl font-light font-space"
+        class="pl-[18px] pr-9 pt-px left-[150px] top-1 absolute bg-white align-middle justify-start items-center inline-flex"
       >
-        Contactez-moi
+        <div
+          class="w-[277px] h-[100px] text-center py-8 text-primary text-xl font-light font-space"
+        >
+          Ou Contactez-moi
+        </div>
       </div>
-    </div>
-    <img
-      class="w-[220px] h-auto absolute left-5 top-[156px] rounded-[50px]"
-      src="../../../assets/imgs/photo_contact.png"
-    />
-    <div
-      class="w-[225px] h-[100px] text-center text-primary text-lg left-5 top-[380px] font-normal relative font-inter"
-    >
-      Vous avez des questions ? Je suis là pour y répondre et vous fournir des
-      informations supplémentaires pour vous guider dans votre parcours
-      d'apprentissage linguistique. Je réponds vos demandes dans les plus brefs
-      délais. Je suis impatient de vous aider à atteindre vos objectifs !
-    </div>
-    <div
-      class="w-[440px] h-[600px] absolute bg-white rounded-[50px] border-2 border-blue left-[37%] top-[150px]"
-    >
-      <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
-        <div class="flex flex-row">
-          <div class="relative left-5 top-10">
-            <label for="name" class="text-xl text-primary font-baskerIta"
-              >Nom</label
+      <img
+        class="w-[220px] h-auto absolute left-5 top-[120px] rounded-[50px]"
+        src="../../../assets/imgs/photo_contact.png"
+      />
+      <div
+        class="w-[205px] h-[100px] text-center text-primary text-sm left-5 top-[320px] font-normal relative font-inter"
+      >
+        Vous avez des questions ? Je suis là pour y répondre et vous fournir des
+        informations supplémentaires pour vous guider dans votre parcours
+        d'apprentissage linguistique. Je réponds vos demandes dans les plus
+        brefs délais. Je suis impatient de vous aider à atteindre vos objectifs
+        !
+      </div>
+      <div
+        class="w-[340px] h-[500px] absolute bg-white rounded-[50px] border-2 border-blue left-[40%] top-[120px]"
+      >
+        <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
+          <div class="flex flex-row">
+            <div class="relative left-5 top-10">
+              <label for="name" class="text-xl text-primary font-space"
+                >Nom</label
+              >
+              <div>
+                <input
+                  type="text"
+                  id="name"
+                  formControlName="name"
+                  required
+                  class="w-[100px] h-[30px] pl-[19px] pr-[29px] py-3 bg-opacity-40 rounded-[20px] justify-start items-center inline-flex bg-blue outline-none text-primary border-none focus:border-none text-sm font-normal font-['Inter']"
+                />
+              </div>
+            </div>
+            <div class="relative left-10 top-10">
+              <label for="email" class="text-xl text-primary font-space"
+                >Email</label
+              >
+              <div>
+                <input
+                  type="email"
+                  id="email"
+                  formControlName="email"
+                  required
+                  class="w-[170px] h-[30px] pl-[19px] pr-[29px] py-3 bg-opacity-40 rounded-[20px] justify-start items-center inline-flex bg-blue outline-none text-primary border-none focus:border-none text-sm font-normal font-['Inter']"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="relative left-5 top-14">
+            <label for="subject" class="text-xl text-primary font-space"
+              >Objet de la demande</label
             >
             <div>
               <input
                 type="text"
-                id="name"
-                formControlName="name"
+                id="subject"
+                formControlName="subject"
                 required
-                class="w-[152px] h-[50px] pl-[19px] pr-[29px] py-3 bg-opacity-40 rounded-[20px] justify-start items-center inline-flex bg-blue outline-none text-primary border-none focus:border-none text-sm font-normal font-['Inter']"
+                class="w-[300px] h-[30px] pl-[19px] pr-[29px] py-3 bg-opacity-40 rounded-[20px] justify-start items-center inline-flex bg-blue outline-none text-primary border-none focus:border-none text-sm font-normal font-['Inter']"
               />
             </div>
           </div>
-          <div class="relative left-10 top-10">
-            <label for="email" class="text-xl text-primary font-baskerIta"
-              >Email</label
+          <div class="relative left-5 top-16">
+            <label for="message" class="text-xl text-primary font-space"
+              >Message</label
             >
             <div>
-              <input
-                type="email"
-                id="email"
-                formControlName="email"
+              <textarea
+                type="text"
+                id="message"
+                formControlName="message"
                 required
-                class="w-[200px] h-[50px] pl-[19px] pr-[29px] py-3 bg-opacity-40 rounded-[20px] justify-start items-center inline-flex bg-blue outline-none text-primary border-none focus:border-none text-sm font-normal font-['Inter']"
-              />
+                class="resize-none w-[300px] h-[230px] pl-[19px] pr-[29px] py-3 bg-opacity-40 rounded-[20px] justify-start bg-blue outline-none text-primary border-none focus:border-none text-lg font-normal font-['Inter']"
+              ></textarea>
             </div>
           </div>
-        </div>
-        <div class="relative left-5 top-14">
-          <label for="subject" class="text-xl text-primary font-baskerIta"
-            >Objet de la demande</label
+          <button
+            (click)="submitForm()"
+            type="submit"
+            class="text-white font-space text-sm px-4 py-2 top-16 left-32 inline-block relative md:text-lg border-primary hover:border-white border-2 md:border-2 rounded-full bg-blue hover:bg-primary transition-all duration-300"
           >
-          <div>
-            <input
-              type="text"
-              id="subject"
-              formControlName="subject"
-              required
-              class="w-[370px] h-[50px] pl-[19px] pr-[29px] py-3 bg-opacity-40 rounded-[20px] justify-start items-center inline-flex bg-blue outline-none text-primary border-none focus:border-none text-sm font-normal font-['Inter']"
-            />
-          </div>
-        </div>
-        <div class="relative left-5 top-16">
-          <label for="message" class="text-xl text-primary font-baskerIta"
-            >Message</label
-          >
-          <div>
-            <textarea
-              type="text"
-              id="message"
-              formControlName="message"
-              required
-              class="resize-none w-[370px] h-[240px] pl-[19px] pr-[29px] py-3 bg-opacity-40 rounded-[20px] justify-start bg-blue outline-none text-primary border-none focus:border-none text-lg font-normal font-['Inter']"
-            ></textarea>
-          </div>
-        </div>
-        <button
-          (click)="submitForm()"
-          type="submit"
-          class="text-white font-baskerIta text-[8px] px-4 py-2 top-20 left-36 inline-block relative md:text-xl border-primary hover:border-white border-2 md:border-2 rounded-full bg-blue hover:bg-primary transition-all duration-300"
-        >
-          Envoyer
-        </button>
-      </form>
+            Envoyer
+          </button>
+        </form>
+      </div>
     </div>
   </div>
 </div>

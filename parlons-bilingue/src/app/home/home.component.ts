@@ -11,6 +11,7 @@ import { AccueilSectionComponent } from '../components/accueil-section/accueil-s
 import { ActivatedRoute } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
 import { ForwardRefHandling } from '@angular/compiler';
+import { ScrollService } from '../services/scroll.service';
 
 @Component({
   selector: 'app-home',
@@ -32,7 +33,8 @@ import { ForwardRefHandling } from '@angular/compiler';
 export class HomeComponent implements AfterViewInit {
   constructor(
     private route: ActivatedRoute,
-    private viewPortScroller: ViewportScroller
+    private viewPortScroller: ViewportScroller,
+    private scrollService: ScrollService
   ) {}
   //---- 1er Bouton
   title: string = 'parlons-bilingue';
@@ -78,5 +80,9 @@ export class HomeComponent implements AfterViewInit {
 
     //   this.viewPortScroller.scrollToPosition([0,fragment]);
     // });
+  }
+
+  scrollToSection(sectionId: string) {
+    this.scrollService.scrollToElement(sectionId);
   }
 }

@@ -1,110 +1,50 @@
 <div class="h-6"></div>
-<nav class="px-4 sticky top-0 z-50" *ngIf="!isTarif">
-  <div class="w-[96%] h-[99px] bg-white bg-opacity-60 absolute rounded-[60px]">
+<nav class="pl-20 pr-10 sticky top-0 z-50" *ngIf="!isTarif">
+  <div
+    class="md:w-[85%] md:h-[63px] bg-white bg-opacity-60 absolute rounded-[60px] flex"
+  >
     <div
-      class="w-[119px] h-20 left-[66px] top-[10px] absolute justify-center items-center inline-flex"
+      class="w-[119px] h-10 left-[20px] top-[10px] absolute justify-center items-center inline-flex"
     >
       <a class="link" href="">
-        <img class="w-[119px] h-20" src="../../../assets/imgs/logo.jpeg" />
+        <img class="w-[70px] h-auto" src="../../../assets/imgs/logo.jpeg" />
       </a>
     </div>
-    <button
-      (click)="scrollToSection('sectionAbout')"
-      class="w-[142px] h-[54px] pl-[19px] pr-[18px] py-[13px] left-[420px] top-[21px] relative border rounded-[50px] justify-center items-center inline-flex bg-white hover:bg-blue transition-all duration-300"
-    >
-      <a
-        class="w-[105px] h-7 text-center text-black hover:text-white transition-all duration-300 cursor-pointer text-xl font-normal font-space"
-      >
-        Qui suis-je
-      </a>
-    </button>
     <button
       (click)="scrollToSection('serviceSection')"
-      class="w-[142px] h-[54px] pl-[19px] pr-[18px] py-[13px] left-[238px] top-[21px] absolute bg-white border rounded-[50px] justify-center items-center inline-flex hover:bg-blue transition-all duration-300"
+      class="w-[150px] h-[44px] pl-[19px] pr-[18px] py-[13px] top-[10px] left-[150px] absolute bg-white border rounded-[50px] justify-center items-center inline-flex hover:bg-blue transition-all duration-300"
     >
       <a
-        class="w-[105px] h-7 text-center text-black text-xl font-normal font-['Space Grotesk'] hover:text-white transition-all duration-300 cursor-pointer"
+        class="w-[100px] h-7 text-center text-black text-lg font-normal font-inter hover:text-white transition-all duration-300 cursor-pointer"
       >
         Services
       </a>
     </button>
     <button
-      (click)="scrollToSection('contactSection')"
-      class="w-[142px] h-[54px] pl-[19px] pr-[18px] py-[13px] left-[601px] top-[23px] absolute border bg-white rounded-[50px] justify-center items-center inline-flex hover:bg-blue transition-all duration-300"
+      (click)="scrollToSection('sectionAbout')"
+      class="w-[150px] h-[44px] pl-[19px] pr-[18px] py-[13px] top-[11px] left-[320px] absolute bg-white border rounded-[50px] justify-center items-center inline-flex hover:bg-blue transition-all duration-300"
     >
       <a
-        class="w-[105px] h-7 text-center text-black hover:text-white transition-all duration-300 cursor-pointer text-xl font-normal font-['Space Grotesk']"
-      >
-        Contact
-      </a>
-    </button>
-    <a
-      class="link w-[105px] h-7 text-center text-black hover:text-white transition-all duration-300 cursor-pointer text-xl font-normal font-['Space Grotesk']"
-      href="/tarifs"
-    >
-      <button
-        class="w-[142px] h-[54px] pl-[19px] pr-[18px] py-[13px] left-[785px] top-[21px] absolute border bg-white rounded-[50px] justify-center items-center inline-flex hover:bg-blue transition-all duration-300"
-      >
-        Tarifs
-      </button>
-    </a>
-    <button
-      (click)="scrollToSection('contactSection')"
-      class="w-[142px] h-[54px] pl-[19px] pr-[18px] py-[13px] left-[955px] top-[22px] absolute bg-white rounded-[50px] border border-blue-500 justify-center items-center inline-flex hover:bg-blue transition-all duration-300"
-    >
-      <a
-        class="w-[105px] h-7 text-center text-black hover:text-white transition-all duration-300 cursor-pointer text-lg font-normal font-['Space Grotesk']"
-      >
-        Essai gratuit
-      </a>
-    </button>
-  </div>
-</nav>
-<!-- NAV - TARIF  -->
-<nav class="px-4 sticky top-0 z-50" *ngIf="isTarif">
-  <div class="w-[96%] h-[99px] bg-white bg-opacity-60 absolute rounded-[60px]">
-    <div
-      class="w-[119px] h-20 left-[66px] top-[10px] absolute justify-center items-center inline-flex"
-    >
-      <a class="link" href="">
-        <img class="w-[119px] h-20" src="../../../assets/imgs/logo.jpeg" />
-      </a>
-    </div>
-    <button
-      (click)="navigateToPosition(4700)"
-      class="w-[142px] h-[54px] pl-[19px] pr-[18px] py-[13px] left-[420px] top-[21px] relative border rounded-[50px] justify-center items-center inline-flex bg-white hover:bg-blue transition-all duration-300"
-    >
-      <a
-        class="w-[105px] h-7 text-center text-black hover:text-white transition-all duration-300 cursor-pointer text-xl font-normal font-space"
+        class="w-[100px] h-7 text-center text-black text-lg font-normal font-inter hover:text-white transition-all duration-300 cursor-pointer"
       >
         Qui suis-je
       </a>
     </button>
     <button
-      (click)="navigateToPosition(800)"
-      class="w-[142px] h-[54px] pl-[19px] pr-[18px] py-[13px] left-[238px] top-[21px] absolute bg-white border rounded-[50px] justify-center items-center inline-flex hover:bg-blue transition-all duration-300"
+      (click)="scrollToSection('contactSection')"
+      class="w-[150px] h-[44px] pl-[19px] pr-[18px] py-[13px] top-[11px] left-[490px] absolute bg-white border rounded-[50px] justify-center items-center inline-flex hover:bg-blue transition-all duration-300"
     >
       <a
-        class="w-[105px] h-7 text-center text-black text-xl font-normal font-['Space Grotesk'] hover:text-white transition-all duration-300 cursor-pointer"
-      >
-        Services
-      </a>
-    </button>
-    <button
-      (click)="navigateToPosition(7500)"
-      class="w-[142px] h-[54px] pl-[19px] pr-[18px] py-[13px] left-[601px] top-[23px] absolute border bg-white rounded-[50px] justify-center items-center inline-flex hover:bg-blue transition-all duration-300"
-    >
-      <a
-        class="w-[105px] h-7 text-center text-black hover:text-white transition-all duration-300 cursor-pointer text-xl font-normal font-['Space Grotesk']"
+        class="w-[100px] h-7 text-center text-black text-lg font-normal font-inter hover:text-white transition-all duration-300 cursor-pointer"
       >
         Contact
       </a>
     </button>
     <button
-      class="w-[142px] h-[54px] pl-[19px] pr-[18px] py-[13px] left-[785px] top-[21px] absolute border bg-white rounded-[50px] justify-center items-center inline-flex hover:bg-blue transition-all duration-300"
+      class="w-[150px] h-[44px] pl-[19px] pr-[18px] py-[13px] top-[11px] left-[670px] absolute bg-white border rounded-[50px] justify-center items-center inline-flex hover:bg-blue transition-all duration-300"
     >
       <a
-        class="link w-[105px] h-7 text-center text-black hover:text-white transition-all duration-300 cursor-pointer text-xl font-normal font-['Space Grotesk']"
+        class="link w-[105px] h-7 text-center text-black hover:text-white transition-all duration-300 cursor-pointer text-xl font-normal font-inter"
         href="/tarifs"
       >
         Tarifs
@@ -112,10 +52,75 @@
     </button>
     <button
       (click)="scrollToSection('contactSection')"
-      class="w-[142px] h-[54px] pl-[19px] pr-[18px] py-[13px] left-[955px] top-[22px] absolute bg-white rounded-[50px] border border-blue-500 justify-center items-center inline-flex hover:bg-blue transition-all duration-300"
+      class="w-[150px] h-[44px] pl-[19px] pr-[18px] py-[13px] top-[11px] left-[850px] absolute bg-white border rounded-[50px] justify-center items-center inline-flex hover:bg-blue transition-all duration-300"
     >
       <a
-        class="w-[105px] h-7 text-center text-black hover:text-white transition-all duration-300 cursor-pointer text-lg font-normal font-['Space Grotesk']"
+        class="w-[120px] h-7 text-center text-black text-lg font-normal font-inter hover:text-white transition-all duration-300 cursor-pointer"
+      >
+        Essai gratuit
+      </a>
+    </button>
+  </div>
+</nav>
+<!-- NAV - TARIF  -->
+<nav class="pl-20 pr-10 sticky top-0 z-50" *ngIf="isTarif">
+  <div
+    class="md:w-[85%] md:h-[63px] bg-white bg-opacity-60 absolute rounded-[60px] flex"
+  >
+    <div
+      class="w-[119px] h-10 left-[20px] top-[10px] absolute justify-center items-center inline-flex"
+    >
+      <a class="link" href="">
+        <img class="w-[70px] h-auto" src="../../../assets/imgs/logo.jpeg" />
+      </a>
+    </div>
+    <button
+      (click)="navigateToPosition(800)"
+      class="w-[150px] h-[44px] pl-[19px] pr-[18px] py-[13px] top-[10px] left-[150px] absolute bg-white border rounded-[50px] justify-center items-center inline-flex hover:bg-blue transition-all duration-300"
+    >
+      <a
+        class="w-[100px] h-7 text-center text-black text-lg font-normal font-inter hover:text-white transition-all duration-300 cursor-pointer"
+      >
+        Services
+      </a>
+    </button>
+    <button
+      (click)="navigateToPosition(4700)"
+      class="w-[150px] h-[44px] pl-[19px] pr-[18px] py-[13px] top-[11px] left-[320px] absolute bg-white border rounded-[50px] justify-center items-center inline-flex hover:bg-blue transition-all duration-300"
+    >
+      <a
+        class="w-[100px] h-7 text-center text-black text-lg font-normal font-inter hover:text-white transition-all duration-300 cursor-pointer"
+      >
+        Qui suis-je
+      </a>
+    </button>
+
+    <button
+      (click)="navigateToPosition(7500)"
+      class="w-[150px] h-[44px] pl-[19px] pr-[18px] py-[13px] top-[11px] left-[490px] absolute bg-white border rounded-[50px] justify-center items-center inline-flex hover:bg-blue transition-all duration-300"
+    >
+      <a
+        class="w-[100px] h-7 text-center text-black text-lg font-normal font-inter hover:text-white transition-all duration-300 cursor-pointer"
+      >
+        Contact
+      </a>
+    </button>
+    <button
+      class="w-[150px] h-[44px] pl-[19px] pr-[18px] py-[13px] top-[11px] left-[670px] absolute bg-white border rounded-[50px] justify-center items-center inline-flex hover:bg-blue transition-all duration-300"
+    >
+      <a
+        class="link w-[105px] h-7 text-center text-black hover:text-white transition-all duration-300 cursor-pointer text-xl font-normal font-inter"
+        href="/tarifs"
+      >
+        Tarifs
+      </a>
+    </button>
+    <button
+      (click)="scrollToSection('contactSection')"
+      class="w-[150px] h-[44px] pl-[19px] pr-[18px] py-[13px] top-[11px] left-[850px] absolute bg-white border rounded-[50px] justify-center items-center inline-flex hover:bg-blue transition-all duration-300"
+    >
+      <a
+        class="w-[120px] h-7 text-center text-black text-lg font-normal font-inter hover:text-white transition-all duration-300 cursor-pointer"
       >
         Essai gratuit
       </a>

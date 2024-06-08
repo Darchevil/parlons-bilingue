@@ -2,17 +2,23 @@
   <img
     src="../../../assets/imgs/logo.jpeg"
     alt="Logo parlons bilingue"
-    class="absolute p-6 h-auto w-32 md:w-56 opacity-75"
+    class="absolute p-9 h-auto w-32 md:w-80 opacity-75"
   />
-  <video class="" autoplay loop muted playsinline>
+  <video
+    #videoElement
+    autoplay
+    muted
+    playsinline
+    (ended)="onVideoEnded($event)"
+  >
     <source src="../../../assets/videos/video-promesse2.mp4" type="video/mp4" />
     Votre navigateur ne prend pas en charge la lecture de la vidéo.
   </video>
   <div
-    class="absolute container w-[30%] md:w-[20%] top-20 md:top-52 left-0 p-6"
+    class="absolute container w-[30%] md:w-[35%] md:h-[30%] top-20 md:top-64 left-0 md:left-7 p-6 rounded-xl bg-primary bg-opacity-50"
     id="accueil-service"
   >
-    <h1 class="absolute w-full font-space text-xs md:text-3xl text-primary">
+    <h1 class="absolute w-full font-space text-xs md:text-5xl text-black">
       Devenez <span class="font-baskerIta text-white"> bilingue </span>depuis
       chez vous
       <span class="font-baskerIta text-white"> en quelques mois</span>
