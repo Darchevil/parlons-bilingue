@@ -25,7 +25,7 @@
       ></div>
       <!-- Fin de widget en ligne Calendly -->
     </div>
-    <!-- TODO: Responsive mobile à terminer -->
+
     <div
       class="w-[90%] h-[30rem] top-12 relative bg-white rounded-[50px] left-6"
     >
@@ -38,7 +38,7 @@
           Ou contactez-moi
         </div>
       </div>
-      <div class="flex flex-col top-24 absolute w-[80%]">
+      <div class="flex flex-col top-24 absolute w-[80%] max-md:hidden">
         <img
           class="w-[30%] h-auto relative left-2 top-[20%] rounded-[50px]"
           src="../../../assets/imgs/photo_contact.png"
@@ -54,12 +54,12 @@
         </div>
       </div>
       <div
-        class="w-[340px] h-[500px] absolute bg-white rounded-[50px] border-2 border-blue left-[40%] top-[120px]"
+        class="w-[70%] h-[80%] absolute bg-white rounded-[50px] border-2 border-blue max-md:left-[15%] max-md:top-[18%]"
       >
         <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
           <div class="flex flex-row">
-            <div class="relative left-5 top-10">
-              <label for="name" class="text-xl text-primary font-space"
+            <div class="relative left-3 top-10">
+              <label for="name" class="max-md:text-lg text-primary font-space"
                 >Nom</label
               >
               <div>
@@ -68,12 +68,12 @@
                   id="name"
                   formControlName="name"
                   required
-                  class="w-[100px] h-[30px] pl-[19px] pr-[29px] py-3 bg-opacity-40 rounded-[20px] justify-start items-center inline-flex bg-blue outline-none text-primary border-none focus:border-none text-sm font-normal font-['Inter']"
+                  class="w-[6rem] h-[30%] pl-[5%] py-3 bg-opacity-40 rounded-[20px] justify-start items-center inline-flex bg-white text-primary border-2 border-primary focus:border-blue text-xs font-normal font-['Inter']"
                 />
               </div>
             </div>
             <div class="relative left-10 top-10">
-              <label for="email" class="text-xl text-primary font-space"
+              <label for="email" class="text-lg text-primary font-space"
                 >Email</label
               >
               <div>
@@ -82,13 +82,13 @@
                   id="email"
                   formControlName="email"
                   required
-                  class="w-[170px] h-[30px] pl-[19px] pr-[29px] py-3 bg-opacity-40 rounded-[20px] justify-start items-center inline-flex bg-blue outline-none text-primary border-none focus:border-none text-sm font-normal font-['Inter']"
+                  class="w-[7rem] h-[30%] pl-[20%] pr-[30%] py-3 bg-opacity-40 rounded-[20px] justify-start items-center inline-flex bg-white text-primary border-2 border-primary focus:border-blue text-xs font-normal font-['Inter']"
                 />
               </div>
             </div>
           </div>
           <div class="relative left-5 top-14">
-            <label for="subject" class="text-xl text-primary font-space"
+            <label for="subject" class="text-sm text-primary font-space"
               >Objet de la demande</label
             >
             <div>
@@ -97,7 +97,7 @@
                 id="subject"
                 formControlName="subject"
                 required
-                class="w-[300px] h-[30px] pl-[19px] pr-[29px] py-3 bg-opacity-40 rounded-[20px] justify-start items-center inline-flex bg-blue outline-none text-primary border-none focus:border-none text-sm font-normal font-['Inter']"
+                class="w-[14rem] h-[30%] py-3 bg-opacity-40 rounded-[20px] justify-start items-center inline-flex bg-white text-primary border-2 border-primary focus:border-blue text-xs font-normal font-['Inter']"
               />
             </div>
           </div>
@@ -111,14 +111,14 @@
                 id="message"
                 formControlName="message"
                 required
-                class="resize-none w-[300px] h-[230px] pl-[19px] pr-[29px] py-3 bg-opacity-40 rounded-[20px] justify-start bg-blue outline-none text-primary border-none focus:border-none text-lg font-normal font-['Inter']"
+                class="resize-none w-[14rem] h-[30%] py-3 bg-opacity-40 rounded-[20px] justify-start items-center inline-flex bg-white text-primary border-2 border-primary focus:border-blue text-xs font-normal font-['Inter']"
               ></textarea>
             </div>
           </div>
           <button
             (click)="submitForm()"
             type="submit"
-            class="text-white font-space text-sm px-4 py-2 top-16 left-32 inline-block relative md:text-lg border-primary hover:border-white border-2 md:border-2 rounded-full bg-blue hover:bg-primary transition-all duration-300"
+            class="text-white font-space text-sm px-8 py-2 top-16 left-16 inline-block relative md:text-lg border-primary hover:border-white border-2 md:border-2 rounded-full bg-blue hover:bg-primary transition-all duration-300"
           >
             Envoyer
           </button>
