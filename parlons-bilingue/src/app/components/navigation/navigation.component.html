@@ -60,51 +60,73 @@
         Essai gratuit
       </a>
     </button>
-
-    <!-- <button
-      (click)="scrollToSection('sectionAbout')"
-      class="w-[150px] h-[44px] pl-[19px] pr-[18px] py-[13px] top-[11px] left-[320px] absolute bg-white border rounded-[50px] justify-center items-center inline-flex hover:bg-blue transition-all duration-300"
+  </div>
+</nav>
+<!-- NAV - TARIF  -->
+<nav class="px-[15%] sticky top-0 z-50" *ngIf="isTarif">
+  <div
+    class="w-[70%] md:w-[70%] h-[2rem] md:h-[5rem] bg-white bg-opacity-60 absolute rounded-[60px] items-center flex"
+  >
+    <a class="link w-[15%] md:w-[10%] h-auto pl-2" href="">
+      <img
+        class="w-auto h-auto rounded-l-full rounded-3xl"
+        src="../../../assets/imgs/logo.jpeg"
+      />
+    </a>
+    <button
+      (click)="navigateToPosition(800)"
+      class="w-[15%] md:w-[15%] h-[40%] md:h-[50%] left-1 md:left-2 relative bg-white border rounded-[50px] justify-center items-center inline-flex hover:bg-blue transition-all duration-300"
     >
       <a
-        class="w-[100px] h-7 text-center text-black text-lg font-normal font-inter hover:text-white transition-all duration-300 cursor-pointer"
+        class="w-auto h-auto pt-0 relative text-black justify-center text-center text-[0.40rem] md:text-lg font-normal font-inter hover:text-white transition-all duration-300 cursor-pointer"
+      >
+        Services
+      </a>
+    </button>
+    <button
+      (click)="navigateToPosition(4700)"
+      class="w-[16%] md:w-[15%] h-[40%] md:h-[50%] left-2 md:left-3 relative bg-white border rounded-[50px] justify-center items-center inline-flex hover:bg-blue transition-all duration-300"
+    >
+      <a
+        class="w-auto md:w-[100px] h-auto pt-0 relative text-black justify-center text-center text-[0.40rem] md:text-lg font-normal font-inter hover:text-white transition-all duration-300 cursor-pointer"
       >
         Qui suis-je
       </a>
-    </button> -->
-    <!-- <button
-      (click)="scrollToSection('contactSection')"
-      class="w-[150px] h-[44px] pl-[19px] pr-[18px] py-[13px] top-[11px] left-[490px] absolute bg-white border rounded-[50px] justify-center items-center inline-flex hover:bg-blue transition-all duration-300"
+    </button>
+    <button
+      (click)="navigateToPosition(7500)"
+      class="w-[14%] md:w-[15%] h-[40%] md:h-[50%] left-3 md:left-4 relative bg-white border rounded-[50px] justify-center items-center inline-flex hover:bg-blue transition-all duration-300"
     >
       <a
-        class="w-[100px] h-7 text-center text-black text-lg font-normal font-inter hover:text-white transition-all duration-300 cursor-pointer"
+        class="w-auto md:w-[100px] h-auto pt-0 relative text-black justify-center text-center text-[0.40rem] md:text-lg font-normal font-inter hover:text-white transition-all duration-300 cursor-pointer"
       >
         Contact
       </a>
-    </button> -->
-    <!-- <button
-      class="w-[150px] h-[44px] pl-[19px] pr-[18px] py-[13px] top-[11px] left-[670px] absolute bg-white border rounded-[50px] justify-center items-center inline-flex hover:bg-blue transition-all duration-300"
+    </button>
+    <button
+      (click)="navigateToPosition(7500)"
+      class="w-[14%] md:w-[15%] h-[40%] md:h-[50%] left-4 md:left-5 relative bg-white border rounded-[50px] justify-center items-center inline-flex hover:bg-blue transition-all duration-300"
     >
       <a
-        class="link w-[105px] h-7 text-center text-black hover:text-white transition-all duration-300 cursor-pointer text-xl font-normal font-inter"
+        class="w-auto md:w-[100px] h-auto pt-0 relative text-black justify-center text-center text-[0.40rem] md:text-lg font-normal font-inter hover:text-white transition-all duration-300 cursor-pointer"
         href="/tarifs"
       >
         Tarifs
       </a>
-    </button> -->
-    <!-- <button
+    </button>
+    <button
       (click)="scrollToSection('contactSection')"
-      class="w-[150px] h-[44px] pl-[19px] pr-[18px] py-[13px] top-[11px] left-[850px] absolute bg-white border rounded-[50px] justify-center items-center inline-flex hover:bg-blue transition-all duration-300"
+      class="w-[18%] md:w-[20%] h-[40%] md:h-[50%] left-5 md:left-7 relative bg-white border rounded-[50px] justify-center items-center inline-flex hover:bg-blue transition-all duration-300"
     >
       <a
-        class="w-[120px] h-7 text-center text-black text-lg font-normal font-inter hover:text-white transition-all duration-300 cursor-pointer"
+        class="w-auto h-auto pt-0 relative text-black justify-center text-center text-[0.40rem] md:text-lg font-normal font-inter hover:text-white transition-all duration-300 cursor-pointer"
       >
         Essai gratuit
       </a>
-    </button> -->
+    </button>
   </div>
 </nav>
-<!-- NAV - TARIF  -->
-<nav class="pl-20 pr-10 sticky top-0 z-50" *ngIf="isTarif">
+<!-- <nav class="pl-20 pr-10 sticky top-0 z-50" *ngIf="isTarif">
   <div
     class="md:w-[85%] md:h-[63px] bg-white bg-opacity-60 absolute rounded-[60px] flex"
   >
@@ -167,4 +189,4 @@
       </a>
     </button>
   </div>
-</nav>
+</nav> -->

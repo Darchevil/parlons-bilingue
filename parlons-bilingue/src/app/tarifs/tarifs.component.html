@@ -1,56 +1,57 @@
-<div class="relative w-full h-[700px] bg-cover">
-  <img
-    src="../../../assets/imgs/img-lancez-vous.png"
-    alt=""
-    class="absolute w-full h-auto"
-  />
+<div class="relative w-full h-auto bg-cover">
   <img
     src="../../../assets/imgs/logo.jpeg"
     alt="Logo parlons bilingue"
-    class="absolute p-9 h-auto w-32 md:w-80 opacity-75"
+    class="absolute p-4 w-28 md:p-9 md:w-80 h-auto opacity-75"
   />
-  <div class="w-[604px] h-[389px] text-center absolute top-[250px]">
-    <span class="text-white text-5xl font-light font-space"
-      >Prêt à devenir bilingue ? <br /></span
-    ><span class="text-blue text-5xl font-normal font-baskerIta"
-      >Lancez-vous</span
-    >
+  <img
+    src="../../../assets/imgs/img-lancez-vous.png"
+    alt=""
+    class="max-w-full"
+  />
+  <div
+    class="absolute container w-[40%] md:w-1/4 left-4 md:left-6 pl-2 h-[15%] md:h-[35%] top-20 md:top-56 rounded-xl bg-primary bg-opacity-50"
+  >
+    <h2 class="absolute text-left font-space text-xs md:text-5xl text-black">
+      Prêts à devenir
+      <span class="font-baskerIta text-white"> bilingue </span> ?
+      <span class="font-baskerIta text-white"> Lancez-vous !</span>
+    </h2>
   </div>
-  <div class="absolute top-44 md:top-[400px] left-6 md:left-56">
+  <div class="absolute top-32 md:top-[60%] left-6 md:left-56">
     <button-large
       [sectionSource]="sectionSourceTarifMsg"
       [textButton]="textJeMeLance"
     ></button-large>
   </div>
 </div>
-<div class="h-[120px]"></div>
 <app-nav [isTarif]="true"></app-nav>
 <div
   id="messageTarif"
-  class="w-[346px] h-[135px] text-center relative top-[200px] left-[400px] text-white text-3xl font-light font-space"
+  class="w-[70%] h-[20%] text-center relative pt-9 left-[15%] text-white text-xl font-light font-space"
 >
   De vrais progrès dès le 1er mois
 </div>
-<div class="relative top-[230px] left-5 w-[500px] h-auto">
-  <img class="rounded-[101px]" src="../../../assets/imgs/success-img.png" />
+<div class="flex flex-col items-center">
+  <div class="relative top-[20%] w-[70%] h-auto">
+    <img class="rounded-[101px]" src="../../../assets/imgs/success-img.png" />
+  </div>
+  <div class="w-[90%] h-[30%] text-center pt-5 text-white font-basker text-sm">
+    Saviez-vous que le
+    <span class="font-baskerIta text-blue text-sm">
+      taux de rétention des connaissances
+    </span>
+    peut atteindre
+    <span class="font-baskerIta text-blue text-sm"> 75 à 80% </span> en quelques
+    semaines de pratique contre 20 à 30% avec l'apprentissage théorique ? C'est
+    pourquoi avec la méthode pratique de parlons bilingue,
+    <span class="font-baskerIta text-blue text-sm"
+      >vous progresserez beaucoup plus vite que vous ne l'imagineriez.</span
+    >
+    Découvrez ce que je vous propose pour atteindre vos objectifs.
+  </div>
 </div>
-<div
-  class="w-[640px] h-[523px] left-[560px] absolute text-center text-white font-basker text-2xl"
->
-  Saviez-vous que le
-  <span class="font-baskerIta text-blue text-2xl">
-    taux de rétention des connaissances
-  </span>
-  peut atteindre
-  <span class="font-baskerIta text-blue text-2xl"> 75 à 80% </span> en quelques
-  semaines de pratique contre 20 à 30% avec l'apprentissage théorique ? C'est
-  pourquoi avec la méthode pratique de parlons bilingue,
-  <span class="font-baskerIta text-blue text-2xl"
-    >vous progresserez beaucoup plus vite que vous ne l'imagineriez.</span
-  >
-  Découvrez ce que je vous propose pour atteindre vos objectifs.
-</div>
-<div class="relative left-[50px] top-[500px] flex space-x-10">
+<div class="relative left-[20%] pt-5 flex flex-col md:flex-row md:space-x-10">
   <tarif-element [name]="etudiant" [prix]="tarifEtudiant"></tarif-element>
   <tarif-element
     [name]="illimite"
