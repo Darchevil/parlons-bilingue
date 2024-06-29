@@ -20,5 +20,9 @@ export class TarifsComponent {
   tarifIllimite: string = '120€/mois';
   surMesure: string = 'Sur-mesure';
   tarifSurMesure: string = '35€/2 séances';
-  avantage2SurMesure: string = 'Séances prédéfinies sur ZOOM';
+  avantage2SurMesure: string = 'Séances prédéfinies';
+  hrefInputSurMesure: string =
+    'https://www.parlonsbilingue.com/offre-sur-mesure';
+  hrefInputEtudiant: string = 'https://www.parlonsbilingue.com/offre-etudiant';
+  hrefInputIllimite: string = 'https://www.parlonsbilingue.com/offre-bilingue';
 }

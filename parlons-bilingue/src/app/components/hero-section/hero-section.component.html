@@ -1,28 +1,35 @@
-<div
-  class="relative container mx-auto w-full h-auto bg-hero-img bg-cover top-[500px]"
->
-  <img class="w-full h-auto" src="../../../assets/imgs/hero-image.png" />
-  <div class="absolute inset-0 flex items-center justify-center top-[30px]">
-    <div
-      class="container bg-primary justify-center bg-opacity-90 w-[700px] h-[160px] rounded-xl"
-    >
-      <p class="text-white font-space text-4xl text-center pt-7">
-        Votre
-        <span class="font-baskerIta text-4xl text-blue"> premier cours </span>
-        est
-        <span class="font-baskerIta text-4xl text-blue"> gratuit </span> et
-        <span class="font-baskerIta text-4xl text-blue underline">
-          sans engagement
-        </span>
-      </p>
+<div class="relative container max-w-full h-auto bg-hero-img bg-cover">
+  <img class="w-[100%] h-auto" src="../../../assets/imgs/hero-image.png" />
+  <div class="absolute inset-0 top-[30%] left-3 flex-col content-center">
+    <div class="md:flex md:justify-center md:h-[40%]">
+      <div
+        class="container relative px-3 bg-primary justify-center bg-opacity-90 w-[42%] max-md:h-[50%] md:h-[70%] rounded-xl"
+      >
+        <p
+          class="text-white font-space text-lg md:text-4xl text-center pt-2 md:pt-7"
+        >
+          Votre
+          <span class="font-baskerIta text-lg md:text-4xl text-blue">
+            premier cours
+          </span>
+          est
+          <span class="font-baskerIta text-lg md:text-4xl text-blue">
+            gratuit
+          </span>
+          et
+          <span class="font-baskerIta text-lg md:text-4xl text-blue underline">
+            sans engagement
+          </span>
+        </p>
+      </div>
     </div>
-  </div>
-  <div class="container absolute top-[500px] left-[650px]">
-    <button
-      (click)="scrollToSection('contactSection')"
-      class="px-3 py-2 bg-none text-white font-baskerIta text-[8px] md:text-xl border-primary hover:border-white w-[300px] h-[80px] border-2 md:border-2 rounded-full bg-blue hover:bg-primary transition-all duration-300"
-    >
-      Je me lance !
-    </button>
+    <div class="container relative left-[25%] md:left-[35%] top-3 md:top-0">
+      <button
+        (click)="scrollToSection('contactSection')"
+        class="px-3 py-2 bg-none text-white font-baskerIta text-sm md:text-xl border-primary hover:border-white w-[50%] md:w-[30%] h-[30%] border-2 md:border-2 rounded-full bg-blue hover:bg-primary transition-all duration-300"
+      >
+        Je me lance !
+      </button>
+    </div>
   </div>
 </div>

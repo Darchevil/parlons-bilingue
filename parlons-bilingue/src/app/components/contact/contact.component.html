@@ -1,65 +1,65 @@
-<div
-  class="relative container w-full h-auto md:top-[620px]"
-  id="contactSection"
->
-  <div class="relative w-[400px] h-auto left-[35%] pt-20 text-center">
-    <span class="text-white text-3xl font-light font-space"
+<div class="relative container w-full h-auto top-8" id="contactSection">
+  <div class="relative w-[60%] h-auto left-[22%] pt-10 text-center">
+    <span class="text-white text-xl font-light font-space"
       >Contactons-nous</span
     >
   </div>
 
-  <div class="flex">
+  <div class="flex flex-col md:flex-row md:space-x-3">
     <div
-      class="w-[450px] h-[680px] relative bg-white rounded-[50px] top-[50px] left-7"
+      class="w-[90%] md:w-[50%] h-[30rem] relative bg-white rounded-[50px] top-10"
     >
       <div
-        class="pl-[18px] pr-9 pt-px left-28 top-[10px] absolute bg-white align-middle justify-start items-center inline-flex"
+        class="left-[35%] top-[10px] w-[30%] h-auto absolute bg-white align-middle justify-start"
       >
         <div
-          class="w-[200px] h-[100px] text-center py-8 px-5 text-primary text-xl font-light font-space"
+          class="w-[100%] h-[20%] text-center py-8 text-primary text-xl font-light font-space"
         >
           Planifiez votre séance
         </div>
       </div>
       <!-- Début de widget en ligne Calendly -->
       <div
-        class="calendly-inline-widget w-[400px] h-[500px] left-10 relative top-[150px]"
+        class="calendly-inline-widget w-[80%] h-[20rem] left-10 top-32 relative"
         data-url="https://calendly.com/parlonsbilingue"
       ></div>
       <!-- Fin de widget en ligne Calendly -->
     </div>
+
     <div
-      class="w-[650px] h-[680px] top-12 relative bg-white rounded-[50px] left-20"
+      class="w-[90%] md:w-[50%] h-[30rem] md:h-auto top-12 relative bg-white rounded-[50px] left-6"
     >
       <div
-        class="pl-[18px] pr-9 pt-px left-[150px] top-1 absolute bg-white align-middle justify-start items-center inline-flex"
+        class="left-[25%] top-[10px] w-[50%] h-auto absolute bg-white align-middle justify-start"
       >
         <div
-          class="w-[277px] h-[100px] text-center py-8 text-primary text-xl font-light font-space"
+          class="w-[100%] h-[20%] text-center py-8 text-primary text-xl font-light font-space"
         >
-          Ou Contactez-moi
+          Ou contactez-moi
         </div>
       </div>
-      <img
-        class="w-[220px] h-auto absolute left-5 top-[120px] rounded-[50px]"
-        src="../../../assets/imgs/photo_contact.png"
-      />
-      <div
-        class="w-[205px] h-[100px] text-center text-primary text-sm left-5 top-[320px] font-normal relative font-inter"
-      >
-        Vous avez des questions ? Je suis là pour y répondre et vous fournir des
-        informations supplémentaires pour vous guider dans votre parcours
-        d'apprentissage linguistique. Je réponds vos demandes dans les plus
-        brefs délais. Je suis impatient de vous aider à atteindre vos objectifs
-        !
+      <div class="flex flex-col top-9 md:top-20 absolute w-[80%] max-md:hidden">
+        <img
+          class="w-[30%] h-auto relative left-2 top-[20%] rounded-[50px]"
+          src="../../../assets/imgs/photo_contact.png"
+        />
+        <div
+          class="w-[40%] h-auto text-center text-primary text-xs left-2 top-2 font-normal relative font-inter"
+        >
+          Vous avez des questions ? Je suis là pour y répondre et vous fournir
+          des informations supplémentaires pour vous guider dans votre parcours
+          d'apprentissage linguistique. Je réponds vos demandes dans les plus
+          brefs délais. Je suis impatient de vous aider à atteindre vos
+          objectifs !
+        </div>
       </div>
       <div
-        class="w-[340px] h-[500px] absolute bg-white rounded-[50px] border-2 border-blue left-[40%] top-[120px]"
+        class="w-[70%] md:w-[45%] h-[80%] md:h-[75%] absolute bg-white rounded-[50px] border-2 border-blue max-md:left-[15%] md:left-[40%] max-md:top-[18%] md:top-[20%]"
       >
         <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
           <div class="flex flex-row">
-            <div class="relative left-5 top-10">
-              <label for="name" class="text-xl text-primary font-space"
+            <div class="relative left-3 top-10 md:top-11">
+              <label for="name" class="max-md:text-lg text-primary font-space"
                 >Nom</label
               >
               <div>
@@ -68,12 +68,12 @@
                   id="name"
                   formControlName="name"
                   required
-                  class="w-[100px] h-[30px] pl-[19px] pr-[29px] py-3 bg-opacity-40 rounded-[20px] justify-start items-center inline-flex bg-blue outline-none text-primary border-none focus:border-none text-sm font-normal font-['Inter']"
+                  class="w-[6rem] h-[30%] pl-[5%] py-3 bg-opacity-40 rounded-[20px] justify-start items-center inline-flex bg-white text-primary border-2 border-primary focus:border-blue text-xs font-normal font-['Inter']"
                 />
               </div>
             </div>
-            <div class="relative left-10 top-10">
-              <label for="email" class="text-xl text-primary font-space"
+            <div class="relative left-10 top-11">
+              <label for="email" class="text-lg text-primary font-space"
                 >Email</label
               >
               <div>
@@ -82,13 +82,13 @@
                   id="email"
                   formControlName="email"
                   required
-                  class="w-[170px] h-[30px] pl-[19px] pr-[29px] py-3 bg-opacity-40 rounded-[20px] justify-start items-center inline-flex bg-blue outline-none text-primary border-none focus:border-none text-sm font-normal font-['Inter']"
+                  class="w-[7rem] h-[30%] pl-[5%] py-3 bg-opacity-40 rounded-[20px] justify-start items-center inline-flex bg-white text-primary border-2 border-primary focus:border-blue text-xs font-normal font-['Inter']"
                 />
               </div>
             </div>
           </div>
           <div class="relative left-5 top-14">
-            <label for="subject" class="text-xl text-primary font-space"
+            <label for="subject" class="text-sm text-primary font-space"
               >Objet de la demande</label
             >
             <div>
@@ -97,7 +97,7 @@
                 id="subject"
                 formControlName="subject"
                 required
-                class="w-[300px] h-[30px] pl-[19px] pr-[29px] py-3 bg-opacity-40 rounded-[20px] justify-start items-center inline-flex bg-blue outline-none text-primary border-none focus:border-none text-sm font-normal font-['Inter']"
+                class="w-[14rem] h-[30%] py-3 bg-opacity-40 rounded-[20px] justify-start items-center inline-flex bg-white text-primary border-2 border-primary focus:border-blue text-xs font-normal font-['Inter']"
               />
             </div>
           </div>
@@ -111,14 +111,14 @@
                 id="message"
                 formControlName="message"
                 required
-                class="resize-none w-[300px] h-[230px] pl-[19px] pr-[29px] py-3 bg-opacity-40 rounded-[20px] justify-start bg-blue outline-none text-primary border-none focus:border-none text-lg font-normal font-['Inter']"
+                class="resize-none w-[14rem] h-[30%] py-3 bg-opacity-40 rounded-[20px] justify-start items-center inline-flex bg-white text-primary border-2 border-primary focus:border-blue text-xs font-normal font-['Inter']"
               ></textarea>
             </div>
           </div>
           <button
             (click)="submitForm()"
             type="submit"
-            class="text-white font-space text-sm px-4 py-2 top-16 left-32 inline-block relative md:text-lg border-primary hover:border-white border-2 md:border-2 rounded-full bg-blue hover:bg-primary transition-all duration-300"
+            class="text-white font-space text-sm px-8 py-2 top-16 left-16 inline-block relative md:text-lg border-primary hover:border-white border-2 md:border-2 rounded-full bg-blue hover:bg-primary transition-all duration-300"
           >
             Envoyer
           </button>

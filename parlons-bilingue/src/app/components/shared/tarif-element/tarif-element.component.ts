@@ -14,12 +14,9 @@ export class TarifElementComponent {
 
   @Input() name: string = 'tarif';
   @Input() prix: string = '90€/mois';
-  @Input() avantage1: string = 'Votre formateur personnel';
-  @Input() avantage2: string = 'Séances illimitées sur zoom';
+  @Input() avantage1: string = 'Formateur personnel';
+  @Input() avantage2: string = 'Séances illimitées ';
   @Input() avantage3: string = 'Suivi personnalisé';
+  @Input() hrefInput: string = '';
   @Input() onTop: boolean = false;
-
-  scrollToSection(id: string) {
-    this.scrollService.scrollToElement(id);
-  }
 }
