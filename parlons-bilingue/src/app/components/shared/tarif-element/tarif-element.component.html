@@ -1,5 +1,5 @@
 <div
-  class="w-[60%] h-[80%] relative bg-black bg-opacity-60 rounded-[40px] flex flex-col"
+  class="w-[60%] md:w-[100%] h-[80%] md:h-[100%] relative bg-black bg-opacity-60 rounded-[40px] flex flex-col"
   [ngClass]="onTop ? 'md:top-[-50px] border-white border-2' : ''"
 >
   <div
@@ -21,40 +21,39 @@
       Sans engagement
     </div>
   </div>
-  <div class="pt-[20%] relative flex flex-col items-center md:items-start">
-    <div class="flex justify-between pb-5 pl-5">
+  <div class="pt-[20%] relative flex flex-col items-center md:items-center">
+    <div class="flex justify-between pb-5 pl-5 md:pl-0">
       <img
-        class="w-[20%] h-[20%] pr-2"
+        class="w-[20%] md:w-auto h-[20%] md:h-auto pr-2"
         src="../../../../assets/imgs/checked.png"
       />
-      <div class="w-auto h-auto text-white text-xl font-normal font-inter flex">
+      <div class="w-auto h-auto text-white text-lg font-normal font-inter flex">
         {{ avantage1 }}
       </div>
     </div>
-    <div class="flex justify-between pb-5 pl-5">
+    <div class="flex justify-between pb-5 pl-5 md:pl-0">
       <img
-        class="w-[20%] h-[20%] pr-2"
+        class="w-[20%] md:w-auto h-[20%] md:h-auto"
         src="../../../../assets/imgs/checked.png"
       />
-      <div class="w-auto h-auto text-white text-xl font-normal font-inter flex">
+      <div class="w-auto h-auto text-white text-lg font-normal font-inter flex">
         {{ avantage2 }}
       </div>
     </div>
-    <div class="flex justify-between pb-5">
+    <div class="flex justify-between pb-5 md:justify-start">
       <img
         class="w-auto h-auto pr-2"
         src="../../../../assets/imgs/checked.png"
       />
-      <div class="w-auto h-auto text-white text-xl font-normal font-inter flex">
+      <div class="w-auto h-auto text-white text-lg font-normal font-inter flex">
         {{ avantage3 }}
       </div>
     </div>
     <div class="relative w-[50%] h-[20%] pb-5">
       <button
-        (click)="scrollToSection('contactSection')"
         class="text-primary hover:text-white font-baskerIta text-sm px-4 py-2 inline-block relative md:text-xl border-primary hover:border-white border-2 md:border-2 rounded-full bg-white hover:bg-blue transition-all duration-300"
       >
-        Commencer maintenant
+        <a href="{{ hrefInput }}"> Commencer maintenant </a>
       </button>
     </div>
   </div>

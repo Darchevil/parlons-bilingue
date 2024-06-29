@@ -18,7 +18,7 @@
       <span class="font-baskerIta text-white"> Lancez-vous !</span>
     </h2>
   </div>
-  <div class="absolute top-32 md:top-[60%] left-6 md:left-56">
+  <div class="absolute top-32 md:top-[65%] left-6 md:left-56">
     <button-large
       [sectionSource]="sectionSourceTarifMsg"
       [textButton]="textJeMeLance"
@@ -28,61 +28,69 @@
 <app-nav [isTarif]="true"></app-nav>
 <div
   id="messageTarif"
-  class="w-[70%] h-[20%] text-center relative pt-9 left-[15%] text-white text-xl font-light font-space"
+  class="w-[70%] md:w-[65%] h-[20%] text-center relative pt-9 md:pt-24 left-[15%] md:self-center text-white text-xl md:text-2xl pb-3 font-light font-space"
 >
   De vrais progrès dès le 1er mois
 </div>
 <div class="flex flex-col items-center">
-  <div class="relative top-[20%] w-[70%] h-auto">
+  <div class="relative top-[20%] w-[70%] md:w-auto h-auto">
     <img class="rounded-[101px]" src="../../../assets/imgs/success-img.png" />
   </div>
-  <div class="w-[90%] h-[30%] text-center pt-5 text-white font-basker text-sm">
+  <div
+    class="w-[90%] h-[30%] text-center pt-5 text-white font-basker text-sm md:text-lg"
+  >
     Saviez-vous que le
-    <span class="font-baskerIta text-blue text-sm">
+    <span class="font-baskerIta text-blue text-sm md:text-lg">
       taux de rétention des connaissances
     </span>
     peut atteindre
-    <span class="font-baskerIta text-blue text-sm"> 75 à 80% </span> en quelques
-    semaines de pratique contre 20 à 30% avec l'apprentissage théorique ? C'est
-    pourquoi avec la méthode pratique de parlons bilingue,
-    <span class="font-baskerIta text-blue text-sm"
+    <span class="font-baskerIta text-blue text-sm md:text-lg"> 75 à 80% </span>
+    en quelques semaines de pratique contre 20 à 30% avec l'apprentissage
+    théorique ? C'est pourquoi avec la méthode pratique de parlons bilingue,
+    <span class="font-baskerIta text-blue text-sm md:text-lg"
       >vous progresserez beaucoup plus vite que vous ne l'imagineriez.</span
     >
     Découvrez ce que je vous propose pour atteindre vos objectifs.
   </div>
 </div>
 <div
-  class="relative left-[20%] pt-5 flex flex-col md:flex-row space-y-10 md:space-x-10"
+  class="relative left-[20%] md:left-0 pt-5 md:pt-16 flex flex-col md:flex-row md:justify-center space-y-10 md:space-y-0 md:space-x-6"
 >
-  <tarif-element [name]="etudiant" [prix]="tarifEtudiant"></tarif-element>
+  <tarif-element
+    [name]="etudiant"
+    [prix]="tarifEtudiant"
+    [hrefInput]="hrefInputEtudiant"
+  ></tarif-element>
   <tarif-element
     [name]="illimite"
     [prix]="tarifIllimite"
     [onTop]="true"
+    [hrefInput]="hrefInputIllimite"
   ></tarif-element>
   <tarif-element
     [name]="surMesure"
     [prix]="tarifSurMesure"
     [avantage2]="avantage2SurMesure"
+    [onTop]="false"
+    [hrefInput]="hrefInputSurMesure"
   ></tarif-element>
 </div>
 
 <div
-  class="w-[650px] h-[730px] relative bg-white rounded-[50px] left-[330px] top-[650px]"
-  id="contactSection"
+  class="w-[90%] md:w-[50%] h-[30rem] left-5 md:left-[25%] relative bg-white rounded-[50px] top-10"
 >
   <div
-    class="pl-[18px] pr-9 pt-px left-[100px] top-[10px] absolute bg-white align-middle rounded-[20px] justify-start items-center inline-flex"
+    class="left-[35%] top-[10px] w-[30%] h-auto absolute bg-white align-middle justify-start"
   >
     <div
-      class="w-[377px] h-[100px] text-center py-8 px-9 text-primary text-xl font-light font-space"
+      class="w-[100%] h-[20%] text-center py-8 text-primary text-xl font-light font-space"
     >
       Planifiez votre séance
     </div>
   </div>
   <!-- Début de widget en ligne Calendly -->
   <div
-    class="calendly-inline-widget w-[600px] h-[500px] relative top-[150px]"
+    class="calendly-inline-widget w-[80%] h-[20rem] left-10 top-32 relative"
     data-url="https://calendly.com/parlonsbilingue"
   ></div>
   <!-- Fin de widget en ligne Calendly -->
