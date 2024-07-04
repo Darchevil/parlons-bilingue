@@ -18,7 +18,6 @@ export class ContactComponent {
   });
 
   public async submitForm(): Promise<void> {
-    //TODO: Ajouter le compte d'Eddy pour qu'il reçoivent les mails
     emailjs.init('6H6syWl_WV7p4SrCv');
     let response = await emailjs.send(
       'service_parlons_bilingue',
